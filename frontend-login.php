@@ -11,8 +11,8 @@ if (is_user_logged_in()) : ?>
 <?php else : ?>
 
   <form class="form-inline" name="loginform" id="loginform" action="<?php echo home_url(); ?>/wp-login.php" method="post">
-    <input type="text" name="log" id="user_login" class="input-medium" value="" tabindex="10" placeholder="Username">
-    <input type="password" name="pwd" id="user_pass" class="input-medium" value="" tabindex="20" placeholder="Password">
+    <input type="text" name="log" id="user_login" class="input-medium" value="" placeholder="Username">
+    <input type="password" name="pwd" id="user_pass" class="input-medium" value="" placeholder="Password">
     <input type="submit" name="wp-submit" id="wp-submit" class="btn btn-primary" value="Log In">
     <input type="hidden" name="redirect_to" value="<?php echo home_url(); ?>">
     <input type="hidden" name="testcookie" value="1">
