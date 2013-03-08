@@ -6,7 +6,7 @@
 
 if (is_user_logged_in()) : ?>
 
-  <a button class="btn" href="<?php echo wp_logout_url(); ?>">Logout</a>
+  <a class="btn" href="<?php echo wp_logout_url(); ?>">Logout</a>
 
 <?php else : ?>
 
