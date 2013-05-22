@@ -14,17 +14,18 @@ add_action( 'init', 'roots_page_excerpt' );
 
 /* Custom Post for Main Page */
 function create_post_type() {
-  register_post_type( 'main_page',
-		array(
-			'labels' => array(
-				'name' => __( 'Main Page Post' ),
-				'singular_name' => __( 'MainPage' )
-			),
-		'public' => true,
-		'has_archive' => true,
-		'supports' => array('title', 'editor', 'thumbnail')
-		)
-	);
+  register_post_type( 'features',
+    array(
+      'labels' => array(
+        'name' => __( 'Features' ),
+        'singular_name' => __( 'Features' )
+      ),
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    'taxonomies' => array('category', 'post_tag') // this is IMPORTANT
+    )
+  );
 }
 add_action( 'init', 'create_post_type' );
 
